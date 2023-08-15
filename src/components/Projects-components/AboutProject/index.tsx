@@ -25,9 +25,9 @@ export function AboutProject() {
         </i>
       </ContentTitle>
       <InformationProject>
-        A car rental website is an online platform that allows users to rent
-        cars for personal or business use. The website provides an interface for
-        searching, comparing, and reserving cars.
+        O site sugere filmes e séries aos usuários, permitindo acesso anônimo ou
+        login para recomendações personalizadas com base em gêneros favoritos.
+        Também inclui uma página de pesquisa para encontrar títulos desejados.
       </InformationProject>
       <MyLinguages>
         <Linguages>Next.js</Linguages>

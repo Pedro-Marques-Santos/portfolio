@@ -25,9 +25,10 @@ export function AboutProject() {
         </i>
       </ContentTitle>
       <InformationProject>
-        A car rental website is an online platform that allows users to rent
-        cars for personal or business use. The website provides an interface for
-        searching, comparing, and reserving cars.
+        Shoppe é uma plataforma de e-commerce. Os usuários têm a capacidade de
+        adicionar produtos a um carrinho de compras e ajustar as quantidades dos
+        itens específicos conforme desejado. Todos os dados são armazenados de
+        forma segura no localstorage do navegador.
       </InformationProject>
       <MyLinguages>
         <Linguages>React.js</Linguages>
