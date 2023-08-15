@@ -20,5 +20,28 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Poppins';
+
+    &::-webkit-scrollbar {
+      width: 5px; /* Largura da barra de rolagem */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #888; /* Cor da alça da barra de rolagem */
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: #555; /* Cor da alça da barra de rolagem quando hover */
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #f2f2f2; /* Cor da trilha da barra de rolagem */
+    }
+  }
+
+  .iconIntroduction {
+    font-size: 25px;
+    @media (max-width: 900px) {
+      font-size: 30px;
+    }
   }
 `;

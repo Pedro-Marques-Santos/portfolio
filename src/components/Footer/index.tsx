@@ -1,17 +1,29 @@
-import { ButtonConnectFooter } from "../ButtonConnectFooter";
-import { Container, Introduction, LetsConnect } from "./styles";
+/* eslint-disable react/jsx-no-target-blank */
+import { Container, ContentContainer, Information, MyIcons } from "./styles";
+
+import { GrLinkedin } from "react-icons/gr";
+import { BsGithub } from "react-icons/bs";
 
 export function Footer() {
   return (
-    <Container>
-      <Introduction>
-        Procurando alguém para se juntar a equipe de desenvolvedor
-      </Introduction>
-      <LetsConnect>
-        Vamos nos conectar
-        <span className="material-symbols-outlined">call_made</span>
-      </LetsConnect>
-      <ButtonConnectFooter />
-    </Container>
+    <ContentContainer>
+      <Container>
+        <Information>
+          seja bem vindo ao meu portfolio, estou a sua disposição para uma
+          conversa sobre suas necessidades de desenvolvimento web.
+        </Information>
+        <MyIcons>
+          <a
+            href={"https://www.linkedin.com/in/pedromarques01/"}
+            target="_blank"
+          >
+            <GrLinkedin />
+          </a>
+          <a href={"https://github.com/Pedro-Marques-Santos"} target="_blank">
+            <BsGithub />
+          </a>
+        </MyIcons>
+      </Container>
+    </ContentContainer>
   );
 }

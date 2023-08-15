@@ -1,56 +1,43 @@
-import { RefObject, useState } from "react";
-import {
-  Container,
-  Home,
-  Item,
-  Menu,
-  MenuBar,
-  Pages,
-  PagesBar,
-  ProgessBar,
-  Tag,
-} from "./styles";
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { RefObject } from "react";
+import { Container, ContentContainer, MyLinks, OpenSmLink } from "./styles";
 
-interface IHeaderProps {
-  refprojetos: RefObject<HTMLDivElement>;
-  refresumo: RefObject<HTMLDivElement>;
+import { BsTextRight } from "react-icons/bs";
+
+interface IHeader {
+  homeref: React.RefObject<HTMLHeadingElement>;
+  aboutref: React.RefObject<HTMLHeadingElement>;
+  projectsref: React.RefObject<HTMLHeadingElement>;
+  contactsref: React.RefObject<HTMLHeadingElement>;
 }
 
-export function Header({ refprojetos, refresumo }: IHeaderProps) {
-  const [progressBar, setProgessBar] = useState(false);
-
-  function handleProjetos() {
-    window.scrollTo({
-      top: refprojetos.current?.offsetTop,
-    });
-  }
-
-  function handleResumo() {
-    window.scrollTo({
-      top: refresumo.current?.offsetTop,
-    });
-  }
+export function Header({
+  homeref,
+  aboutref,
+  projectsref,
+  contactsref,
+}: IHeader) {
+  const myScrollToElement = (useref: RefObject<HTMLHeadingElement>) => {
+    if (useref.current) {
+      const boundingRef = useref.current.getBoundingClientRect();
+      const topOffset = window.scrollY + boundingRef.top - 10;
+      window.scrollTo({ top: topOffset, behavior: "smooth" });
+    }
+  };
 
   return (
-    <Home>
+    <ContentContainer>
       <Container>
-        <Menu>
-          <Tag>Desenvolvedor</Tag>
-          <ProgessBar onClick={() => setProgessBar(!progressBar)}>
-            <i className="material-symbols-outlined">density_small</i>
-          </ProgessBar>
-          <Pages>
-            <Item onClick={handleProjetos}>Projetos</Item>
-            <Item onClick={handleResumo}>Resumo</Item>
-          </Pages>
-        </Menu>
-        <MenuBar stateProgessBar={progressBar}>
-          <PagesBar>
-            <Item onClick={handleProjetos}>Projetos</Item>
-            <Item onClick={handleResumo}>Resumo</Item>
-          </PagesBar>
-        </MenuBar>
+        <h1>Pedro.dev</h1>
+        <MyLinks>
+          <div onClick={() => myScrollToElement(aboutref)}>About</div>
+          <div onClick={() => myScrollToElement(projectsref)}>Projects</div>
+          <div onClick={() => myScrollToElement(contactsref)}>Contacts</div>
+        </MyLinks>
+        <OpenSmLink>
+          <BsTextRight />
+        </OpenSmLink>
       </Container>
-    </Home>
+    </ContentContainer>
   );
 }

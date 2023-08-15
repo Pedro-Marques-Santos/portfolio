@@ -1,34 +1,45 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  margin-top: 200px;
-  min-height: 250px;
-  background: var(--black);
-  color: var(--white);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+export const ContentContainer = styled.div`
+  background-color: #2d2e32;
+  padding-top: 80px;
+  padding-bottom: 80px;
 `;
 
-export const Introduction = styled.div`
+export const Container = styled.div`
+  max-width: 890px;
+  margin: 0 auto;
   padding-left: 8px;
   padding-right: 8px;
-  font-size: 20px;
-  font-weight: 100;
-  line-height: 48px;
-  letter-spacing: -0.04em;
-  text-align: center;
+
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    text-align: center;
+  }
 `;
 
-export const LetsConnect = styled.div`
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 53px;
-  letter-spacing: -0.04em;
+export const Information = styled.div`
+  color: #fff;
+  max-width: 500px;
+  @media (max-width: 600px) {
+    margin: 0 auto;
+  }
+`;
 
-  span {
-    margin-left: 8px;
-    font-size: 22px;
+export const MyIcons = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 25px;
+
+  @media (max-width: 600px) {
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+
+  a {
+    color: #fff;
   }
 `;
