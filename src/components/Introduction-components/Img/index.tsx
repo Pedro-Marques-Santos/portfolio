@@ -1,6 +1,6 @@
 import { Container } from "./styles";
 
-import img from "../../../assets/img/foto_1-removebg-preview.png";
+import img from "../../../assets/img/WhatsApp_Image_2023-08-18_at_09.45_1-removebg-preview.png";
 
 export function Img() {
   return (

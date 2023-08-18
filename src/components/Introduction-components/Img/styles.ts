@@ -8,8 +8,8 @@ export const Container = styled.div`
   img {
     width: 100%;
     max-width: 320px;
-    background-color: transparent;
-    border: 1px solid gray;
+    background: white;
+    border: 2px solid black;
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     -webkit-animation: morph 8s ease-in-out infinite;
     animation: morph 8s ease-in-out infinite;
