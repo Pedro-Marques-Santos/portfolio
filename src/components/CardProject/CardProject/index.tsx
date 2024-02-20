@@ -24,7 +24,7 @@ export function CardProject({
 }: ICardProject) {
   return (
     <Container>
-      <Img img={img} />
+      <Img img={img} demo={demo} />
       <AboutProject
         demo={demo}
         Myicon={icon}

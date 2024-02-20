@@ -1,11 +1,14 @@
 import imgproject from "../../../assets/projectsimg/imgxxx 1.png";
 import { Container } from "./styles";
+interface IImg {
+  demo: string;
+}
 
-const openDemo = () => {
-  window.open("https://search-movie-five.vercel.app/dashboard", "_blank");
-};
+export function Img({ demo }: IImg) {
+  const openDemo = () => {
+    window.open(`${demo}`, "_blank");
+  };
 
-export function Img() {
   return (
     <Container>
       <img src={imgproject} alt="project" onClick={openDemo} />

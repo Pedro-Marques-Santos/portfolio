@@ -1,9 +1,5 @@
 import styled from "styled-components";
 
-const openDemo = () => {
-  window.open("https://deluxe-froyo-8651cb.netlify.app/", "_blank");
-};
-
 const Container = styled.div`
   width: 100%;
   display: flex;
@@ -21,9 +17,14 @@ const Container = styled.div`
 
 interface IImg {
   img: string;
+  demo: string;
 }
 
-export function Img({ img }: IImg) {
+export function Img({ img, demo }: IImg) {
+  const openDemo = () => {
+    window.open(`${demo}`, "_blank");
+  };
+
   return (
     <Container>
       <img src={img} alt="project" onClick={openDemo} />
