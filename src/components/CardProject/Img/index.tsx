@@ -1,33 +1,32 @@
-import React from "react";
 import styled from "styled-components";
-
-import imgproject from "../../../../assets/projectsimg/shoppexs 1.png";
 
 const openDemo = () => {
   window.open("https://deluxe-froyo-8651cb.netlify.app/", "_blank");
 };
 
 const Container = styled.div`
-  width: 60%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 
   img {
     width: 100%;
-    max-width: 500px;
+    max-width: 750px;
+    overflow: hidden;
     cursor: pointer;
-  }
-
-  @media (max-width: 900px) {
-    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
 `;
 
-export function Img() {
+interface IImg {
+  img: string;
+}
+
+export function Img({ img }: IImg) {
   return (
     <Container>
-      <img src={imgproject} alt="project" onClick={openDemo} />
+      <img src={img} alt="project" onClick={openDemo} />
     </Container>
   );
 }

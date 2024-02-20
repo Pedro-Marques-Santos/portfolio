@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 40%;
-  @media (max-width: 900px) {
-    width: 100%;
-  }
+  width: 100%;
 `;
 
 export const ContentTitle = styled.div`
+  margin-top: 15px;
   display: flex;
   justify-content: center;
 
@@ -28,6 +26,8 @@ export const Title = styled.div`
 `;
 
 export const InformationProject = styled.div`
+  max-width: 700px;
+  margin: 0 auto;
   color: #2f2f2f;
   text-align: center;
   padding-left: 10px;

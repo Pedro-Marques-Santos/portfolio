@@ -10,13 +10,14 @@ export function CardIntroduction() {
       <h1>Full Stack</h1>
       <h1>
         Developer
-        <span>
+        {/* <span>
           <img src={hello} alt="" />
-        </span>
+        </span> */}
       </h1>
       <About>
         Olá, sou Pedro Marques. Um desenvolvedor Full Stack em Reactjs, Nextjs e
-        Nodejs moro em Conchal, São Paulo. 📍
+        Nodejs moro em Conchal, São Paulo.
+        {/* 📍 */}
       </About>
       <Icons>
         <span>
