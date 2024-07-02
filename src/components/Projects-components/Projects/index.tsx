@@ -32,7 +32,7 @@ export function Projects({ projectsref }: IProjects) {
           demo="https://teste-personalidade-mzl5.vercel.app/"
         />
       </ContentProjects>
-      <ContentProjects>
+      {/* <ContentProjects>
         <CardProject
           img={imgsearchmovie}
           title="Search Movie"
@@ -42,7 +42,7 @@ export function Projects({ projectsref }: IProjects) {
           demo="https://search-movie-five.vercel.app/dashboard"
           github={"https://github.com/Pedro-Marques-Santos/search-movie"}
         />
-      </ContentProjects>
+      </ContentProjects> */}
       <ContentProjects>
         <CardProject
           img={imgshoppe}

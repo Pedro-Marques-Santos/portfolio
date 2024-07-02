@@ -35,7 +35,8 @@ export function MyJobs({ jobsref }: IMyJobs) {
         <Jobs
           name1="Desenvolvedor Web"
           name2="Agência V-ONE · Tempo integral"
-          date="ago de 2023 - o momento · 7 meses"
+          date="ago de 2023 - o momento · 12
+           meses"
           img={imgvone}
           resposabilities={vone}
         />
